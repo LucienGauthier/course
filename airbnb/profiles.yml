@@ -1,13 +1,13 @@
 airbnb:
   outputs:
     dev:
-      dataset: dbt_dev
+      type: bigquery
+      method: oauth
+      project: airbnb-511709
+      dataset: dev
+      location: EU
       job_execution_timeout_seconds: 300
       job_retries: 1
-      location: EU
-      method: oauth
       priority: interactive
-      project: dbt-training-510813
       threads: 4
-      type: bigquery
   target: dev
